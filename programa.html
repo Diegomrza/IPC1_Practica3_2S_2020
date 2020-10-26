@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="master.css">
+
+  <!--Agregar JQUERY-->
+  <script  scr="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+  <div class="lon">
+  
+    <h1>Calculadora</h1>
+    <form id="Calculadora" >
+      <label for="a">A</label>
+      <input name="numero1" type="text" placeholder=" ">
+
+      <label for="b">B</label> 
+      <input name="numero2" type="text" placeholder=" ">
+      <input type="submit" value="+">  
+      <input type="submit" value="-">
+      <input type="submit" value="*">
+      <input type="submit" value="/">
+      <input type="submit" value="^">
+      <input type="submit" value="raiz"><br>
+      <label for="r">Resultado</label>
+      <input name="r" type="text" placeholder=" ">
+
+     
+    </form>
+    <!-- /.panel-->
+
+  </div>
+    <div id="historial">
+        <h2>Historial</h2>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+  
+   <!-- codigo para hacer logi-->
+    <script>
+      //Ajuntamos un controlador para el form
+      $("#loginForm").submit(function(event){
+        //Evento que el formulario
+        event.preventDefault();
+        //Obtener los valores de la caja de texto
+
+        var $form = $(this),
+        numero1= $form.find("input[name='numero1']").val(),
+        numero2 = $form.find("input[name='numero2']").val(),
+        url = 'https://proyectogame.herokuapp.com/login';
+
+        var posting = $.post(url, {
+          numero1: numero1,
+          numero2: numero2
+
+        })
+          posting.done(function(data){
+
+            var  content= $(data).find("#content")
+            console.long(content);
+          })
+      });
+    </script>
+</body>
+</html>

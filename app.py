@@ -8,6 +8,9 @@ CORS(app)
 @app.route('/suma', methods=['POST'])
 def sumar():
 
+    numero1 = request.form.get('numero1')
+    numero2 = request.form.get('numero2')
+    
     return 'Suma' 
 
 @app.route('/resta', methods=['POST'])

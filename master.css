@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    padding: 0;
+    background:linear-gradient(30deg,#16b8b8,#139797,#0d6363,black,black);
+    font-family: sans-serif;
+    height: 100vh;
+   
+
+
+}
+
+.lon{
+    text-align: center; 
+    margin: auto;
+    color: #fff;
+}
+.login .avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50%)
+}
+.lon h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.lon label{
+    text-align: center; 
+    margin: auto;
+    
+}
+
+.lon input{
+    width: 40%;
+    margin-bottom: 20px;
+
+}
+.lo input[type="text"],
+.lo input[type="text"]{
+border: none;
+border-bottom: 1px solid #000;
+
+outline: none;
+height: 40px;
+color:#fff;
+font-size: 16px;
+
+}
+
+.lon input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: black;
+    border-bottom: 5px solid aqua;
+    box-shadow: 6px 6px 6px #999;
+    font-size: 19px;
+    color: white;
+    text-align: center;
+    
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.login input[type="submit"]:hover{
+    background: #0096f7;
+
+}
+.login input[type="submit"]:active{
+    box-shadow: 2px 2px 2px #777, 0px 0px 35px
+    0px #00b7f8;
+    border-bottom: 1px solid #0045A6;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 5px
+    #fff;
+    transform: translate(4px);
+    transition: all 0.1s ease 0s;
+    
+
+}
+.login a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: aqua;
+}
+
+.login a:hover{
+    color: palevioletred; 
+
+}
+
+#historial{
+    background-color: white;
+    width :50%;
+    height : 40%;
+    overflow : scroll;
+    text-align: center; 
+    margin: auto;
+    color:black;
+
+}
