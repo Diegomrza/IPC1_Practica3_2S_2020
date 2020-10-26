@@ -10,24 +10,39 @@ def sumar():
 
     numero1 = request.form.get('numero1')
     numero2 = request.form.get('numero2')
-    
-    return 'Suma' 
+
+    suma = numero1+numero2
+    return suma 
 
 @app.route('/resta', methods=['POST'])
 def restar():
 
-    return 'Resta' 
+    numero1 = request.form.get('numero1')
+    numero2 = request.form.get('numero2')
+
+    resta = numero1-numero2
+    return resta 
 
 @app.route('/multiplicacion', methods=['POST'])
 def multiplicar():
 
-    return 'Multi' 
+    numero1 = request.form.get('numero1')
+    numero2 = request.form.get('numero2')
+
+    multiplicacion = numero1*numero2
+
+    return multiplicacion 
    
 
 @app.route('/division', methods=['POST'])
 def dividir():
 
-    return 'Divi' 
+    numero1 = request.form.get('numero1')
+    numero2 = request.form.get('numero2')
+
+    division = numero1/numero2
+    
+    return division 
 
 if __name__ == "__main__":
 	app.run(threaded = True,port = 3000, debug = True)
