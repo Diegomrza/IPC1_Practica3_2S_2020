@@ -9,8 +9,8 @@ CORS(app)
 def sumar():
     if request.method == 'POST':
 
-        numero1 = request.form.get('numero1')
-        numero2 = request.form.get('numero2')
+        numero1 = request.form.get('numero_uno')
+        numero2 = request.form.get('numero_dos')
         suma = Operaciones()
         suma.suma(numero1, numero2)
 
